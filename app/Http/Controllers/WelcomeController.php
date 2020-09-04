@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Room;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
@@ -17,7 +18,7 @@ class WelcomeController extends Controller
     }
 
     public function rooms() {
-        return view("home/rooms");
+        return view("home/rooms")->with("rooms", Room::all());
     }
 
     public function about_us() {
@@ -30,6 +31,11 @@ class WelcomeController extends Controller
 
     public function contact() {
         return view("home/contact");
+    }
+
+    public function room_details($id) {
+        $room = Room::findOrFail($id);
+        return view("home/room-details")->with("room", $room);
     }
 
     /**

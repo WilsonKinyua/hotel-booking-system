@@ -1,3 +1,6 @@
+{{-- Author: Wilson Kinyua Muthoni  wilsonkinyuam@gmail.com--}}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,10 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Hotel Booking</title>
+    {{-- <title>Hotel Booking</title> --}}
+     @yield('title')
 
     <!-- Favicon -->
-    <link rel="icon" href="{{asset('assets/img/core-img/favicon.png')}}">
+    {{-- <link rel="icon" href="{{asset('assets/img/core-img/favicon.png')}}"> --}}
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{asset('assets/style.css')}}">
@@ -30,7 +34,7 @@
         <!-- Search Form -->
         <div class="search-form d-flex align-items-center">
             <div class="container">
-                <form action="index.html" method="get">
+                <form action="" method="get">
                     <input type="search" name="search-form-input" id="searchFormInput" placeholder="Type your keyword ...">
                     <button type="submit"><i class="icon_search"></i></button>
                 </form>
@@ -44,8 +48,8 @@
 
                     <div class="col-6">
                         <div class="top-header-content">
-                            <a href="#"><i class="icon_phone"></i> <span>(123) 456-789-1230</span></a>
-                            <a href="#"><i class="icon_mail"></i> <span>info.colorlib@gmail.com</span></a>
+                            <a href="#"><i class="icon_phone"></i> <span>(254) 717-255-460</span></a>
+                            <a href="#"><i class="icon_mail"></i> <span>info.starfive@gmail.com</span></a>
                         </div>
                     </div>
 
@@ -53,10 +57,10 @@
                         <div class="top-header-content">
                             <!-- Top Social Area -->
                             <div class="top-social-area ml-auto">
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/ilson.kiny/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="http://twitter.com/code_the_guy"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/ilsonkiny/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>

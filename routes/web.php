@@ -32,6 +32,4 @@ Route::get('/news','WelcomeController@blog')->name('blog');
 
 Route::get('/contact','WelcomeController@contact')->name('contact');
 
-// Route::get('/','WelcomeController@index')->name('welcome');
-
-// Route::get('/','WelcomeController@index')->name('welcome');
+Route::get('rooms/room-details/{details}', 'WelcomeController@room_details')->name("room.details");
