@@ -32,37 +32,37 @@
                             <div id="room-thumbnail--slide" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="{{asset('assets/img/bg-img/48.jpg')}}" class="d-block w-100" alt="">
+                                        <img src="{{asset('assets/img/bg-img/'.$room->slide_photo_1)}}" class="d-block w-100" alt="">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="{{asset('assets/img/bg-img/49.jpg')}}" class="d-block w-100" alt="">
+                                        <img src="{{asset('assets/img/bg-img/'.$room->slide_photo_2)}}" class="d-block w-100" alt="">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="{{asset('assets/img/bg-img/50.jpg')}}" class="d-block w-100" alt="">
+                                        <img src="{{asset('assets/img/bg-img/'.$room->slide_photo_3)}}" class="d-block w-100" alt="">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="{{asset('assets/img/bg-img/51.jpg')}}" class="d-block w-100" alt="">
+                                        <img src="{{asset('assets/img/bg-img/'.$room->slide_photo_4)}}" class="d-block w-100" alt="">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="{{asset('assets/img/bg-img/52.jpg')}}" class="d-block w-100" alt="">
+                                        <img src="{{asset('assets/img/bg-img/'.$room->slide_photo_5)}}" class="d-block w-100" alt="">
                                     </div>
                                 </div>
 
                                 <ol class="carousel-indicators">
                                     <li data-target="#room-thumbnail--slide" data-slide-to="0" class="active">
-                                        <img src="{{asset('assets/img/bg-img/48.jpg')}}" class="d-block w-100" alt="">
+                                        <img src="{{asset('assets/img/bg-img/'.$room->slide_photo_1)}}" class="d-block w-100" alt="">
                                     </li>
                                     <li data-target="#room-thumbnail--slide" data-slide-to="1">
-                                        <img src="{{asset('assets/img/bg-img/49.jpg')}}" class="d-block w-100" alt="">
+                                        <img src="{{asset('assets/img/bg-img/'.$room->slide_photo_2)}}" class="d-block w-100" alt="">
                                     </li>
                                     <li data-target="#room-thumbnail--slide" data-slide-to="2">
-                                        <img src="{{asset('assets/img/bg-img/50.jpg')}}" class="d-block w-100" alt="">
+                                        <img src="{{asset('assets/img/bg-img/'.$room->slide_photo_3)}}" class="d-block w-100" alt="">
                                     </li>
                                     <li data-target="#room-thumbnail--slide" data-slide-to="3">
-                                        <img src="{{asset('assets/img/bg-img/51.jpg')}}" class="d-block w-100" alt="">
+                                        <img src="{{asset('assets/img/bg-img/'.$room->slide_photo_4)}}" class="d-block w-100" alt="">
                                     </li>
                                     <li data-target="#room-thumbnail--slide" data-slide-to="4">
-                                        <img src="{{asset('assets/img/bg-img/52.jpg')}}" class="d-block w-100" alt="">
+                                        <img src="{{asset('assets/img/bg-img/'.$room->slide_photo_5)}}" class="d-block w-100" alt="">
                                     </li>
                                 </ol>
                             </div>
@@ -94,12 +94,12 @@
                         <h4>Room Services</h4>
 
                         <ul>
-                            <li><img src="{{asset('assets/img/core-img/icon1.png')}}" alt=""> Air Conditioning</li>
-                            <li><img src="{{asset('assets/img/core-img/icon2.png')}}" alt=""> Free drinks</li>
-                            <li><img src="{{asset('assets/img/core-img/icon3.png')}}" alt=""> Restaurant quality</li>
-                            <li><img src="{{asset('assets/img/core-img/icon4.png')}}" alt=""> Cable TV</li>
-                            <li><img src="{{asset('assets/img/core-img/icon5.png')}}" alt=""> Unlimited Wifi</li>
-                            <li><img src="{{asset('assets/img/core-img/icon6.png')}}" alt=""> Service 24/24</li>
+                            <li><img src="{{asset('assets/img/core-img/icon1.png')}}" alt=""> {{$room->services1}}</li>
+                            <li><img src="{{asset('assets/img/core-img/icon2.png')}}" alt=""> {{$room->services2}}</li>
+                            <li><img src="{{asset('assets/img/core-img/icon3.png')}}" alt=""> {{$room->services3}}</li>
+                            <li><img src="{{asset('assets/img/core-img/icon4.png')}}" alt=""> {{$room->services4}}</li>
+                            <li><img src="{{asset('assets/img/core-img/icon5.png')}}" alt=""> {{$room->services5}}</li>
+                            <li><img src="{{asset('assets/img/core-img/icon6.png')}}" alt=""> {{$room->services6}}</li>
                         </ul>
                     </div>
 

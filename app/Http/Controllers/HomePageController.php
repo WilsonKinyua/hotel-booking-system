@@ -2,11 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Room;
 use Illuminate\Http\Request;
 
-class WelcomeController extends Controller
+class HomePageController extends Controller
 {
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function slides()
+    {
+        // return view("home/index")->with("slides",);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -14,28 +24,7 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return view("home/index")->with("rooms");
-    }
-
-    public function rooms() {
-        return view("home/rooms")->with("rooms", Room::all());
-    }
-
-    public function about_us() {
-        return view("home/about-us");
-    }
-
-    public function blog() {
-        return view("home/blog");
-    }
-
-    public function contact() {
-        return view("home/contact");
-    }
-
-    public function room_details($id) {
-        $room = Room::findOrFail($id);
-        return view("home/room-details")->with("room", $room);
+        //
     }
 
     /**

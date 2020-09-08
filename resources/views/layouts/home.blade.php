@@ -60,7 +60,7 @@
                                 <a href="https://www.facebook.com/ilson.kiny/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 <a href="http://twitter.com/code_the_guy"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
-                                <a href="https://www.instagram.com/ilsonkiny/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/code_the_guy/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
