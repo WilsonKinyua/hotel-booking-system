@@ -24,7 +24,14 @@ class BookRoomRequest extends FormRequest
     public function rules()
     {
         return [
-            
+            "first_name" => "required",
+            "last_name" => "required",
+            "email" => "required",
+            "check_in" => "required",
+            "check_out" => "required",
+            "rooms" => "required",
+            "adults" => "required",
+            "phone" => "required",
         ];
     }
 }

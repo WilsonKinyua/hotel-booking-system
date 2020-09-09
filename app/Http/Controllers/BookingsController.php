@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Booking;
+use App\Http\Requests\BookRoomRequest;
 use App\Room;
 use Illuminate\Http\Request;
 
@@ -14,8 +16,7 @@ class BookingsController extends Controller
      */
     public function index()
     {
-        // $random = substr(number_format(time() * rand(),0,'',''),0,10);
-        // return view("admin/booking/index")->with("random",$random);
+       
     }
 
     public function book_room($id)
@@ -42,9 +43,27 @@ class BookingsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BookRoomRequest $request)
     {
-        //
+        $data = ([
+                "first_name" => $request->first_name,
+                "last_name" => $request->last_name,
+                "email" => $request->email,
+                "check_in" => $request->check_in,
+                "check_out" => $request->check_out,
+                "rooms" => $request->rooms,
+                "adults" => $request->adults,
+                "phone" => $request->phone,
+                "body" => $request->body,
+                "children" => $request->children,
+                "unique_id" => $request->unique_id,
+                "room_id" => $request->room_id,
+        ]);
+
+        $book = Booking::create($data);
+        $id = $book->unique_id;
+        session()->flash("success","Room booked succesfully. Please copy the following ID ( ". $id .") to display on arrival at the hotel for further processing. Thank you ");
+        return redirect()->back();
     }
 
     /**

@@ -1,6 +1,9 @@
 <?php
 
+use App\Mail\ContactMail;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,4 +39,9 @@ Route::get("/admin","AdminController@index")->name("admin.bookings");
 Route::resource('booking', 'BookingsController');
 
 Route::get("rooms/room-details/{details}/book","BookingsController@book_room")->name("room.book");
+
+// Route::post('rooms/room-details/{details}/book', function(Request $request) {
+//     Mail::send(new ContactMail($request));
+//     return redirect()->back();
+// });
 

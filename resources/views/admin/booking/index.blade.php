@@ -1,6 +1,6 @@
 
 @section('title')
-    <title>Book for : {{ $room->name }}</title>
+    <title>Book for :  {{ $room->name }}</title>
 @endsection
 
 <!DOCTYPE html>
@@ -125,24 +125,25 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
-
             <form class="text-center border border-light p-5" action="{{route('booking.store')}}" method="POST">
                     @csrf
                     <p class="h3 mb-4">Welcome to Star Hotel</p>
                     <p class="h6 mb-4">Book for  <span style="font-weight: 900">{{ $room->name }}</span></p>
-                   
+                        @include('partials.errors')
+                        @include('partials.flash-messages') 
+                            {{-- {{ isset($unique_id) ? $unique_id : '' }} --}}
                         <div class="row form-group">
                             <div class="col-lg-6 col-md-2 col-lg-3">
                                 <input type="hidden" name="unique_id" value="{{ $random }}">
                                 <input type="hidden" name="room_id" value="{{ $room->id }}">
-                                <input type="text" name="first_name" id="defaultContactFormName" class="form-control mb-4" placeholder="First name*" required>
+                                <input type="text" name="first_name" id="defaultContactFormName" class="form-control mb-4" value="{{old('first_name')}}" placeholder="First name*" required>
                             </div>
                             <div class="col-lg-6 col-md-2 col-lg-3">
-                                <input type="text" name="last_name" id="defaultContactFormName" class="form-control mb-4" placeholder="Last name*" required>
+                                <input type="text" name="last_name" id="defaultContactFormName" class="form-control mb-4" value="{{old('last_name')}}" placeholder="Last name*" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Email" required>
+                            <input type="email" name="email" id="defaultContactFormEmail" class="form-control mb-4" value="{{old('femail')}}" placeholder="Email" required>
                         </div>
                     <div class="row form-group">
                         <div class="col-lg-6 col-md-2 col-lg-3">
@@ -191,17 +192,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="number" name="phone" id="defaultContactFormName" class="form-control mb-4" placeholder="Phone Number" required>
+                        <input type="number" name="phone" value="{{old('phone')}}" id="defaultContactFormName" class="form-control mb-4" placeholder="Phone Number" required>
                     </div>
-
-
                     <div class="form-group">
                         <p class="info-text">Please describe your needs e.g. Extra beds, children's cots. If none leave blank</p>
-                        <textarea class="form-control rounded-0" name="body" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+                        <textarea class="form-control rounded-0"  name="body" id="exampleFormControlTextarea2" rows="3" placeholder="Message">{{old('body')}}</textarea>
                     </div>
-
                     <button class="btn btn-info btn-block" type="submit">Book Now</button>
-
             </form>
 
         </div>
