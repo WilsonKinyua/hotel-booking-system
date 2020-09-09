@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Auth::routes();
 
@@ -33,3 +30,10 @@ Route::get('/news','WelcomeController@blog')->name('blog');
 Route::get('/contact','WelcomeController@contact')->name('contact');
 
 Route::get('rooms/room-details/{details}', 'WelcomeController@room_details')->name("room.details");
+
+Route::get("/admin","AdminController@index")->name("admin.bookings");
+
+Route::resource('booking', 'BookingsController');
+
+Route::get("rooms/room-details/{details}/book","BookingsController@book_room")->name("room.book");
+

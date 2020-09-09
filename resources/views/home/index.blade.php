@@ -75,7 +75,10 @@
     <div class="hotel-search-form-area">
         <div class="container-fluid">
             <div class="hotel-search-form">
-                <form action="#" method="post">
+
+
+
+                {{-- <form action="{{route}}" method="post"> --}}
                     <div class="row justify-content-between align-items-end">
                         <div class="col-6 col-md-2 col-lg-3">
                             <label for="checkIn">Check In</label>
@@ -123,6 +126,9 @@
                         </div>
                     </div>
                 </form>
+
+
+
             </div>
         </div>
     </div>
