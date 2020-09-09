@@ -45,6 +45,7 @@ class RoomsTableSeeder extends Seeder
             "slide_photo_3" => $photo8->file,
             "slide_photo_4" => $photo9->file,
             "slide_photo_5" => $photo10->file,
+            "slide_home" => "1",
             ]);
 
         $room1 = Room::create([
@@ -66,6 +67,7 @@ class RoomsTableSeeder extends Seeder
             "slide_photo_3" => $photo8->file,
             "slide_photo_4" => $photo9->file,
             "slide_photo_5" => $photo10->file,
+            "slide_home" => "1",
             ]);
 
         $room2 = Room::create([
@@ -87,6 +89,7 @@ class RoomsTableSeeder extends Seeder
             "slide_photo_3" => $photo8->file,
             "slide_photo_4" => $photo9->file,
             "slide_photo_5" => $photo10->file,
+            "slide_home" => "1",
             ]);
 
         $room3 = Room::create([

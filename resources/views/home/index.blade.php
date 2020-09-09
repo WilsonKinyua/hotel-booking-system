@@ -212,6 +212,7 @@
 <section class="roberto-rooms-area">
     <div class="rooms-slides owl-carousel">
         <!-- Single Room Slide -->
+        
         <div class="single-room-slide d-flex align-items-center">
             <!-- Thumbnail -->
             <div class="room-thumbnail h-100 bg-img" style="background-image: url({{asset('assets/img/bg-img/16.jpg')}});"></div>
@@ -248,6 +249,8 @@
                 <a href="#" class="btn roberto-btn mt-30" data-animation="fadeInUp" data-delay="700ms">View Details</a>
             </div>
         </div>
+
+        
     </div>
 </section>
 <!-- Our Room Area End -->

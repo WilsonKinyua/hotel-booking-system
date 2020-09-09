@@ -33,6 +33,7 @@ class CreateRoomsTable extends Migration
             $table->string("services5");
             $table->string("services6");
             $table->text("body");
+            $table->integer("slide_home")->default(0);
             $table->timestamps();
         });
     }

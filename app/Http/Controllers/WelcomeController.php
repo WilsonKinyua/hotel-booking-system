@@ -14,7 +14,7 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return view("home/index")->with("rooms");
+        return view("home/index")->with("rooms",Room::where("slide_home","1"));
     }
 
     public function rooms() {
