@@ -122,7 +122,7 @@
                             </select>
                         </div>
                         <div class="col-12 col-md-3">
-                            <button type="submit" class="form-control btn roberto-btn w-100">Check Availability</button>
+                            <button type="submit" disabled class="form-control btn roberto-btn w-100">Check Availability</button>
                         </div>
                     </div>
                 </form>
@@ -139,11 +139,11 @@
                 <!-- Section Heading -->
                 <div class="section-heading wow fadeInUp" data-wow-delay="100ms">
                     <h6>About Us</h6>
-                    <h2>Welcome to <br>Roberto Hotel Luxury</h2>
+                    <h2>Welcome to <br>Star Hotel</h2>
                 </div>
                 <div class="about-us-content mb-100">
                     <h5 class="wow fadeInUp" data-wow-delay="300ms">With over 340 hotels worldwide, NH Hotel Group offers a wide variety of hotels catering for a perfect stay no matter where your destination.</h5>
-                    <p class="wow fadeInUp" data-wow-delay="400ms">Manager: <span>Michen Taylor</span></p>
+                    <p class="wow fadeInUp" data-wow-delay="400ms">Manager: <span>Wilson Kinyua</span></p>
                     <img src="{{asset('assets/img/core-img/signature.png')}}" alt="" class="wow fadeInUp" data-wow-delay="500ms">
                 </div>
             </div>
@@ -233,7 +233,7 @@
                     <li><span><i class="fa fa-check"></i> Bed</span> <span>: King Beds</span></li>
                     <li><span><i class="fa fa-check"></i> Services</span> <span>: Wifi, Television, Bathroom</span></li>
                 </ul>
-                <a href="#" class="btn roberto-btn mt-30" data-animation="fadeInUp" data-delay="700ms">View Details</a>
+                <a href="{{route('rooms')}}" class="btn roberto-btn mt-30" data-animation="fadeInUp" data-delay="700ms">View Details</a>
             </div>
         </div>
 
@@ -252,7 +252,7 @@
                     <li><span><i class="fa fa-check"></i> Bed</span> <span>: King Beds</span></li>
                     <li><span><i class="fa fa-check"></i> Services</span> <span>: Wifi, Television, Bathroom</span></li>
                 </ul>
-                <a href="#" class="btn roberto-btn mt-30" data-animation="fadeInUp" data-delay="700ms">View Details</a>
+                <a href="{{route('rooms')}}" class="btn roberto-btn mt-30" data-animation="fadeInUp" data-delay="700ms">View Details</a>
             </div>
         </div>
 

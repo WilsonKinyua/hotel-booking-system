@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Room;
+use App\Contact;
 use Illuminate\Http\Request;
 
-class WelcomeController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,28 +14,7 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return view("home/index")->with("rooms",Room::where("slide_home","1"));
-    }
-
-    public function rooms() {
-        return view("home/rooms")->with("rooms", Room::paginate(4));
-    }
-
-    public function about_us() {
-        return view("home/about-us");
-    }
-
-    public function blog() {
-        return view("home/blog");
-    }
-
-    public function contact() {
-        return view("home/contact");
-    }
-
-    public function room_details($id) {
-        $room = Room::findOrFail($id);
-        return view("home/room-details")->with("room", $room);
+        //
     }
 
     /**
@@ -56,7 +35,15 @@ class WelcomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = ([
+            "name" => $request->name,
+            "email" => $request->email,
+            "body" => $request->body
+        ]);
+
+        Contact::create($data);
+        session()->flash("success","Message sent successfully, Thank you!!!!!!");
+        return redirect()->back();
     }
 
     /**

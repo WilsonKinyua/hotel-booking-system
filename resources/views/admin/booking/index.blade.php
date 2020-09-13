@@ -93,19 +93,8 @@
                                         <ul class="dropdown">
                                             <li><a href="{{route('welcome')}}">- Home</a></li>
                                             <li><a href="{{route('rooms')}}">- Rooms</a></li>
-                                            <li><a href="./single-room.html">- Single Rooms</a></li>
                                             <li><a href="{{route('about-us')}}">- About Us</a></li>
-                                            <li><a href="./blog.html">- Blog</a></li>
-                                            <li><a href="./single-blog.html">- Single Blog</a></li>
                                             <li><a href="{{route('contact')}}">- Contact</a></li>
-                                            <li><a href="#">- Dropdown</a>
-                                                <ul class="dropdown">
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                </ul>
-                                            </li>
                                         </ul>
                                     </li>
                                     <li><a href="{{route('blog')}}">News</a></li>

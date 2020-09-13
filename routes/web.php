@@ -40,6 +40,8 @@ Route::resource('booking', 'BookingsController');
 
 Route::get("rooms/room-details/{details}/book","BookingsController@book_room")->name("room.book");
 
+Route::resource('message', 'ContactController');
+
 // Route::post('rooms/room-details/{details}/book', function(Request $request) {
 //     Mail::send(new ContactMail($request));
 //     return redirect()->back();

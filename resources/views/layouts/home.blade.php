@@ -10,8 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Title -->
-    {{-- <title>Hotel Booking</title> --}}
+ 
      @yield('title')
 
     <!-- Favicon -->
@@ -23,12 +22,7 @@
 </head>
 
 <body>
-    <!-- Preloader -->
-    <!-- <div id="preloader">
-        <div class="loader"></div>
-    </div> -->
-    <!-- /Preloader -->
-
+   
     <!-- Header Area Start -->
     <header class="header-area">
         <!-- Search Form -->
@@ -49,7 +43,7 @@
                     <div class="col-6">
                         <div class="top-header-content">
                             <a href="#"><i class="icon_phone"></i> <span>(254) 717-255-460</span></a>
-                            <a href="#"><i class="icon_mail"></i> <span>info.starfive@gmail.com</span></a>
+                            <a href="#"><i class="icon_mail"></i> <span>wilsonkinyuam@gmail.com</span></a>
                         </div>
                     </div>
 
@@ -78,7 +72,7 @@
                     <nav class="classy-navbar justify-content-between" id="robertoNav">
 
                         <!-- Logo -->
-                    <a class="nav-brand" href="{{route('welcome')}}"><img src="{{asset('assets/img/core-img/logo.png')}}" alt=""></a>
+                    <a class="nav-brand" href="{{route('welcome')}}">Star Hotel</a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -101,19 +95,8 @@
                                         <ul class="dropdown">
                                             <li><a href="{{route('welcome')}}">- Home</a></li>
                                             <li><a href="{{route('rooms')}}">- Rooms</a></li>
-                                            <li><a href="./single-room.html">- Single Rooms</a></li>
                                             <li><a href="{{route('about-us')}}">- About Us</a></li>
-                                            <li><a href="./blog.html">- Blog</a></li>
-                                            <li><a href="./single-blog.html">- Single Blog</a></li>
                                             <li><a href="{{route('contact')}}">- Contact</a></li>
-                                            <li><a href="#">- Dropdown</a>
-                                                <ul class="dropdown">
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                </ul>
-                                            </li>
                                         </ul>
                                     </li>
                                     <li><a href="{{route('blog')}}">News</a></li>
@@ -121,13 +104,13 @@
                                 </ul>
 
                                 <!-- Search -->
-                                <div class="search-btn ml-4">
+                                {{-- <div class="search-btn ml-4">
                                     <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
+                                </div> --}}
 
                                 <!-- Book Now -->
                                 <div class="book-now-btn ml-3 ml-lg-5">
-                                <a href="{{route('register')}}">Book Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                <a href="{{route('rooms')}}">Book Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                             <!-- Nav End -->
@@ -146,18 +129,18 @@
 
 
      <!-- Call To Action Area Start -->
-     <section class="roberto-cta-area">
+     <section class="roberto-cta-area mb-3">
         <div class="container">
             <div class="cta-content bg-img bg-overlay jarallax" style="background-image: url({{asset('assets/img/bg-img/1.jpg')}});">
                 <div class="row align-items-center">
                     <div class="col-12 col-md-7">
                         <div class="cta-text mb-50">
                             <h2>Contact us now!</h2>
-                            <h6>Contact (+12) 345-678-9999 to book directly or for advice</h6>
+                            <h6>Contact (+254) 717-255-460 to book directly or for advice</h6>
                         </div>
                     </div>
                     <div class="col-12 col-md-5 text-right">
-                        <a href="#" class="btn roberto-btn mb-50">Contact Now</a>
+                        <a href="{{route('contact')}}" class="btn roberto-btn mb-50">Contact Now</a>
                     </div>
                 </div>
             </div>
@@ -166,7 +149,7 @@
     <!-- Call To Action Area End -->
 
     <!-- Partner Area Start -->
-    <div class="partner-area">
+    {{-- <div class="partner-area">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -185,7 +168,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Partner Area End -->
 
     <!-- Footer Area Start -->
@@ -198,33 +181,15 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-80">
                             <!-- Footer Logo -->
-                            <a href="#" class="footer-logo"><img src="{{asset('assets/img/core-img/logo2.png')}}" alt=""></a>
+                            {{-- <a href="#" class="footer-logo">Star Hotel</a> --}}
 
-                            <h4>+12 345-678-9999</h4>
-                            <span>Info.colorlib@gmail.com</span>
-                            <span>856 Cordia Extension Apt. 356, Lake Deangeloburgh, South Africa</span>
+                            <h4>+254 717-255-460</h4>
+                            <span>wilsonkinyuam@gmail.com</span>
+                            <span>Moi Ave, Nairobi Kenya</span>
                         </div>
                     </div>
 
-                    <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget mb-80">
-                            <!-- Widget Title -->
-                            <h5 class="widget-title">Our Blog</h5>
-
-                            <!-- Single Blog Area -->
-                            <div class="latest-blog-area">
-                                <a href="#" class="post-title">Freelance Design Tricks How</a>
-                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> Jan 02, 2019</span>
-                            </div>
-
-                            <!-- Single Blog Area -->
-                            <div class="latest-blog-area">
-                                <a href="#" class="post-title">Free Advertising For Your Online</a>
-                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> Jan 02, 2019</span>
-                            </div>
-                        </div>
-                    </div>
+                
 
                     <!-- Single Footer Widget Area -->
                     <div class="col-12 col-sm-4 col-lg-2">
@@ -234,10 +199,10 @@
 
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Room</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Career</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQs</a></li>
+                                <li><a href="{{route('about-us')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
+                                <li><a href="{{route('rooms')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Room</a></li>
+                                {{-- <li><a href="{{route('')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> Career</a></li> --}}
+                                {{-- <li><a href="{{route('')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQs</a></li> --}}
                             </ul>
                         </div>
                     </div>
